@@ -20,7 +20,6 @@ $data = json_decode($json, true);
 //// get clientId for all SQL queries
 $clientIds = "clientId='$clientId'";
 
-
 $checkBasicSecurity = true;
 ///// check for API security
 if ($frontEndApiKey != $backEndApiKey) {/// start if 1
