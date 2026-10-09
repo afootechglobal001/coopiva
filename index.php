@@ -28,8 +28,7 @@
     <?php include 'header.php' ?>
 
     <section class="index-content-div">
-        
-        <?php include 'footer.php' ?>
+        <h1>index</h1>
     </section>
 </body>
 
