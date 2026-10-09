@@ -10,11 +10,20 @@
 <link href="<?php echo $websiteUrl?>/style/aos.css" type="text/css" rel="stylesheet" />
 <link href="<?php echo $websiteUrl?>/style/paramount.css?v=<?php echo $codeVersion?>" type="text/css"rel="stylesheet" />
 <link href="<?php echo $websiteUrl?>/style/tablePaginator.css?v=<?php echo $codeVersion?>" type="text/css" rel="stylesheet" />
-<link href="<?php echo $websiteUrl?>/style/main-style.css?v=<?php echo $codeVersion?>" type="text/css"rel="stylesheet" />
+<link href="<?php echo $websiteUrl?>/portal/style/main-style.css?v=<?php echo $codeVersion?>" type="text/css"rel="stylesheet" />
+<link href="<?php echo $websiteUrl?>/portal/style/nav-style.css?v=<?php echo $codeVersion?>" type="text/css"rel="stylesheet" />
+<link href="<?php echo $websiteUrl?>/portal/style/jquery.datetimepicker.css" type="text/css"rel="stylesheet"/>
 
-<script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+<script src="<?php echo $websiteUrl?>/js/jquery-v3.6.1.min.js"></script>
 
 <script src="<?php echo $websiteUrl?>/js/paramount.js?v=<?php echo $codeVersion?>"></script>
 <script src="<?php echo $websiteUrl?>/js/textfield-selectfield.js?v=<?php echo $codeVersion?>"></script>
 <script src="<?php echo $websiteUrl?>/js/helper.js?v=<?php echo $codeVersion?>" type="text/javascript"></script>
 <script src="<?php echo $websiteUrl?>/js/aos.js"></script>
+<script src="<?php echo $websiteUrl?>/js/tablePaginator.js?v=<?php echo $codeVersion?>"></script>
+
+<script src="<?php echo $websiteUrl?>/portal/js/jquery.datetimepicker.js"></script>
+<script src="<?php echo $websiteUrl?>/portal/js/chart.min.js"></script>
+<script src="<?php echo $websiteUrl?>/portal/js/canvasjs.min.js" type="text/javascript"></script>
+
+<script src="<?php echo $websiteUrl?>/portal/js/useDashboard.js?v=<?php echo $codeVersion?>" type="text/javascript"></script>
