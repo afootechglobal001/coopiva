@@ -5,7 +5,7 @@
 
 <head>
     <?php include 'meta.php' ?>
-    <title><?php echo $appName ?> | Professional Property Maintenance & Facility Services in the USA</title>
+    <title><?php echo $appName ?> | Property Maintenance & Facility Services in the USA</title>
     <meta name="keywords"
         content="<?php echo $appName ?>, BowCare Maintenance Services, property maintenance USA, facility maintenance, building maintenance services, commercial maintenance, residential maintenance, handyman services, janitorial services, cleaning services USA, office maintenance, home maintenance, property repairs, facility management, preventive maintenance, maintenance contractors, building care services, property management support, maintenance company USA, repair and maintenance services" />
     <meta name="description"
