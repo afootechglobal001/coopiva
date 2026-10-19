@@ -4,7 +4,7 @@
 <meta name="distribution" content="global">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link href="<?php echo $websiteUrl?>/all-images/images/icon.png" rel="shortcut icon" type="image-png" />
+<link href="<?php echo $websiteUrl?>/all-images/images/icon2.png" rel="shortcut icon" type="image-png" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 <link href="<?php echo $websiteUrl?>/style/animate.css" type="text/css" rel="stylesheet" media="all">
 <link href="<?php echo $websiteUrl?>/style/aos.css" type="text/css" rel="stylesheet" />

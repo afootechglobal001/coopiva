@@ -11,9 +11,10 @@
 <link href="<?php echo $websiteUrl?>/style/paramount.css?v=<?php echo $codeVersion?>" type="text/css"rel="stylesheet" />
 <link href="<?php echo $websiteUrl?>/admin/login/style/main-style.css?v=<?php echo $codeVersion?>" type="text/css" rel="stylesheet" />
 
+
 <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
 <script src="<?php echo $websiteUrl?>/js/paramount.js?v=<?php echo $codeVersion?>"></script>
 <script src="<?php echo $websiteUrl?>/js/textfield-selectfield.js?v=<?php echo $codeVersion?>"></script>
 <script src="<?php echo $websiteUrl?>/js/aos.js"></script>
 
-<script src="<?php echo $websiteUrl?>/admin/login/js/useAdmin.js?v=<?php echo $codeVersion?>"></script>
+<script src="<?php echo $websiteUrl?>/admin/login/js/useAuth.js?v=<?php echo $codeVersion?>"></script>

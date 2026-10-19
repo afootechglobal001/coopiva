@@ -9,6 +9,7 @@ switch ($action){
 		$ids=$_POST['ids'];
 		$pageCategory=$_POST['pageCategory'];
 		require_once('dashboard-content.php');
+
 	break;
 
 	case 'get_form':
