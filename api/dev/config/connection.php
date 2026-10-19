@@ -15,25 +15,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 
 // for schoolbolt admin connection;
 $_HOST_NAME_ADMIN = "23.106.46.178"; // backup server
-$_DB_USERNAME_ADMIN = "coopiva_dev";
+$_DB_USERNAME_ADMIN = "afootechlab_coopiva_dev";
 $_DB_PASSWORD_ADMIN = "Password@Dec292025";
-$_DB_NAME_ADMIN = "coopiva_administrative_dev_db";
+$_DB_NAME_ADMIN = "afootechlab_coopiva_administrative_dev_db";
 
 $connAdmin = mysqli_connect($_HOST_NAME_ADMIN, $_DB_USERNAME_ADMIN, $_DB_PASSWORD_ADMIN) or die("Unable to connect to MySQL1");
 mysqli_select_db($connAdmin, $_DB_NAME_ADMIN) or die("Could not connect to CoopIVA Admin Database");
+mysqli_set_charset($connAdmin, "utf8mb4");
+
 /////////////////////////////////////////////////////////////////
 
 // for client connection;
 $_HOST_NAME_CLIENT = "23.106.46.178"; // backup server
-$_DB_USERNAME_CLIENT = "coopiva_dev";
+$_DB_USERNAME_CLIENT = "afootechlab_coopiva_dev";
 $_DB_PASSWORD_CLIENT = "Password@Oct092026";
-$_DB_NAME_CLIENT = "coopiva_client_dev_db";
+$_DB_NAME_CLIENT = "afootechlab_coopiva_client_dev_db";
 
-$conn = mysqli_connect($_HOST_NAME_CLIENT, $_DB_USERNAME_CLIENT, $_DB_PASSWORD_CLIENT) or die("Unable to connect to MySQL1");
-mysqli_select_db($conn, $_DB_NAME_CLIENT) or die("Could not connect to CoopIVA Client Database");
+$connClient = mysqli_connect($_HOST_NAME_CLIENT, $_DB_USERNAME_CLIENT, $_DB_PASSWORD_CLIENT) or die("Unable to connect to MySQL1");
+mysqli_select_db($connClient, $_DB_NAME_CLIENT) or die("Could not connect to CoopIVA Client Database");
+mysqli_set_charset($connClient, "utf8mb4");
 
 /////////////////////////////////////////////////////////////////
-mysqli_set_charset($conn, "utf8mb4");
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
 require_once 'crud.php';
