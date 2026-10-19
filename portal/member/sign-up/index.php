@@ -1,0 +1,96 @@
+
+<?php include '../../config/constants.php'; ?>
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <?php include 'meta.php' ?>
+    <title><?php echo $appName ?> | Member Sign Up</title>
+</head>
+
+<body>
+    <div class="portal-registration-div">
+        <div class="portal-registration-image-div"></div>
+
+        <div class="portal-registration-form-div">
+            <div class="admin-login-div">
+
+                <div class="login-logo">
+                    <a href="<?php echo $websiteUrl ?>">
+                        <img src="<?php echo $websiteUrl ?>/all-images/images/logo.png" alt="Copiva Logo">
+                    </a>
+                </div>
+
+                <h1>Create <span>Account!</span></h1>
+
+                <p>Create your Copiva Member account to connect with your cooperative society and manage your membership.</p>
+
+                <div class="input-div">
+                    <div class="text_field_container" id="full_name_container">
+                        <script>
+                            textField({
+                                id: 'full_name',
+                                title: 'Full Name',
+                                type: 'text'
+                            });
+                        </script>
+                    </div>
+
+                    <div class="text_field_container" id="email_container">
+                        <script>
+                            textField({
+                                id: 'email',
+                                title: 'Email Address',
+                                type: 'email'
+                            });
+                        </script>
+                    </div>
+
+                    <div class="text_field_container" id="phone_container">
+                        <script>
+                            textField({
+                                id: 'phone',
+                                title: 'Phone Number',
+                                type: 'tel'
+                            });
+                        </script>
+                    </div>
+
+                    <div class="text_field_container" id="password_container">
+                        <script>
+                            textField({
+                                id: 'password',
+                                title: 'Password',
+                                type: 'password'
+                            });
+                        </script>
+                    </div>
+
+                    <div class="text_field_container" id="confirm_password_container">
+                        <script>
+                            textField({
+                                id: 'confirm_password',
+                                title: 'Confirm Password',
+                                type: 'password'
+                            });
+                        </script>
+                    </div>
+                </div>
+
+                <div class="login-btn">
+                    <button type="button">
+                        Sign Up <i class="bi bi-arrow-right"></i>
+                    </button>
+                </div>
+
+                <span>Already have an account? <a href="<?php echo $websiteUrl ?>/member/login">Log in</a></span>
+
+            </div>
+        </div>
+    </div>
+
+    <?php include 'bottom-scripts.php'; ?>
+</body>
+
+</html>

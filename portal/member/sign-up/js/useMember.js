@@ -8,3 +8,16 @@ $(document).ready(function () {
     }
   });
 });
+
+
+function _nextLoginPage(props) {
+    const {
+        page = '',
+    } = props;
+
+    _getPage({
+        page: page,
+        url: memberLoginLocalUrl,
+        pageContainer: 'page-content'
+    });
+}

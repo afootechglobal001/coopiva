@@ -7,6 +7,8 @@ $clientWebsiteUrl='http://localhost/afootech/coopiva';
 	//$clientWebsiteUrl='https://coopiva.com';
 //$websiteUrl='https://coopiva.com/portal'; /// For Live Server Url //
 $websiteUrl = 'http://localhost/afootech/coopiva/portal';
+
+
 //$websitePath = $_SERVER['DOCUMENT_ROOT'];
 $websitePath = $_SERVER['DOCUMENT_ROOT'].'/coopiva/portal'; //dirname(__FILE__);
 $codeVersion = date('Ymdhis');
@@ -42,18 +44,22 @@ $userDeviceId = getBrowserId();
 <script>
     /// Constants ///
     var websiteUrl = "<?php echo $websiteUrl; ?>";
+   
     var clientWebsiteUrl = "<?php echo $clientWebsiteUrl; ?>";
     var userOsBrowser = "<?php echo $userOsBrowser; ?>"; /// For User OS Browser //
     var userIpAddress = "<?php echo $userIpAddress; ?>"; /// For User IP Address //
     var userDeviceId = "<?php echo $userDeviceId; ?>"; /// For User Device Id //
 
-    /// CBT Admin Middleware Urls ///
-    var cbtLoginMiddleWareUrl = websiteUrl + '/admin/login/config/code'; /// For CBT Login Middleware Url //
-    var cbtLoginUrl = websiteUrl + '/admin/login'; /// For CBT Login Url //
+    /// auth Admin Middleware Urls ///
+    var adminLoginMiddleWareUrl = websiteUrl + '/admin/login/config/code'; /// For admin Login Middleware Url //
+    var adminLoginUrl = websiteUrl + '/admin/login'; /// For admin Login Url //
+
+     var memberLoginMiddleWareUrl = websiteUrl + '/member/login/config/code'; /// For member Login Middleware Url //
+    var memberLoginUrl = websiteUrl + '/member/login'; /// For member Login Url //
 
     /// Admin Middleware Urls ///
-    var cbtAdminMiddleWareUrl = websiteUrl + '/admin/config/code'; /// For CBT Admin Login Middleware Url //
-    var cbtAdminUrl = websiteUrl + '/admin'; /// For Admin Url //
+    var dashAdminMiddleWareUrl = websiteUrl + '/admin/config/code'; /// For CBT Admin Login Middleware Url //
+    var dashAdminUrl = websiteUrl + '/admin'; /// For Admin Url //
 
     /// Student Portal Middleware Urls ///
     var cbtStudentPortalMiddleWareUrl = websiteUrl + '/student/config/code'; /// For CBT Student Portal Middleware Url //

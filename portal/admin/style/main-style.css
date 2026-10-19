@@ -1,3 +1,168 @@
 h1 {
     color: #007bff;
 }
+
+.inner-content{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: calc(100% - 210px);
+    height: calc(100% - 65px);
+    overflow: auto;
+    background:  #f8f8f8;
+}
+
+
+.dashboard-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.dash-title-div{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    background: rgba(8, 138, 25, 0.05);
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.075);
+}
+
+.dash-title-div .dash-title-div-in{
+    width: 97%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dash-title-div .dash-title-div-in .title{
+   width: 750px;
+   display: flex;
+   justify-content: center;
+   gap: 20px;
+   padding: 10px 0px;
+}
+
+.dash-title-div .dash-title-div-in .title .icon-div{
+    padding: 8px 5px;
+    border-radius: 10px;
+   background-image: linear-gradient(to right, #088A19, #012060);
+    height: 20px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.dash-title-div .dash-title-div-in .title .icon-div i{
+    font-size: 25px;
+    color: var(--white-color);
+   
+}
+
+.dash-title-div .dash-title-div-in .title .text-div h2 {
+    font-family: title-font;
+    font-size: 22px;
+    background-image: linear-gradient(to right, #088A19 80%, #012060 20%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+.dash-title-div .dash-title-div-in .title .text-div p{
+    font-family: body-font;
+    font-size: 13px;
+    color: var(--sub-body-color);
+}
+
+
+.bottom-title{
+    width: 240px;
+    height: 60px;
+    padding: 0px 10px;
+    background: var(--white-color);
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    gap: 10px;
+}
+
+.bottom-title .icon-div-text-div{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 8px;
+   border-right: #c5c5c5 3px dotted;
+   padding: 3px 7px;
+}
+
+.bottom-title .icon-div-text-div .icon-div{
+    width: 40px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #DDF1E1;
+}
+
+.bottom-title .icon-div-text-div .icon-div i{
+    font-size: 22px;
+    color: var(--primary-color);
+}
+
+.bottom-title .login-text{
+    width: 70px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.bottom-title .login-text h4{
+ font-size: 13px;
+ color: #000;
+}
+
+.bottom-title .login-text small{
+ font-size: 12px;
+ color: var(--primary-color);
+ font-family: sub-title-font;
+}
+
+.bottom-title .date-time-div{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.bottom-title .date-time-div span{
+  font-size: 13px;
+  font-family: sub-title-font;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.bottom-title .date-time-div span i{
+  color: var(--primary-color);
+}
+ .dashboard-wrapper{
+    width: 100%;
+    height: calc(100% - 100px);
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    background: #f8f8f8;
+}
+
+.dashboard-wrapper .dashboard-wrapper-inner{
+    width: 97%;
+    display: flex;
+    flex-direction: column;
+} 
+

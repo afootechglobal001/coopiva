@@ -32,7 +32,7 @@ html {
 	font-family: body-font;
 	src: url(Poppins/Poppins-Regular.ttf);
 }
-
+/* 
 :root{
 	--primary-color: #07418d;
   --secondary-color: #f7a025;
@@ -145,7 +145,30 @@ html {
   --cbt-exam-page-bg: #fafafa;
   --cbt-exam-question-bg: #ecf0f1;
   --cbt-exam-question-box-shadow: #d0d2d3;
+} */
+
+
+:root {
+    --primary-color: #088A19;
+    --secondary-color: #012060;
+
+    --body-color: #000;
+    --sub-body-color: #888787;
+    --sub-body-color2: #383838;
+    --text-color: #6F6F6F;
+
+ 
+    --link-color: #0A84D8;
+    --white-color: #fff;
+    --bg-color: #F5F8FC;
+
+    --close-color: #F00;
+    --active-color: #079A3D;
+    --active-color2: #A8E6B8;
+
+    --sub-text-color: #073A82;
 }
+
 
 html.dark-mode{
   --primary-color: #042555;

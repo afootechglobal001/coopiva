@@ -1,0 +1,272 @@
+@charset "utf-8";
+/* General reset */
+
+.portal-registration-div {
+    width: 100%;
+    height: 100%;
+}
+.portal-registration-div .portal-registration-image-div {
+    position: fixed;
+    left: 0;
+    width: 30%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.portal-registration-div .portal-registration-image-div::before,
+.portal-registration-div .portal-registration-image-div::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.portal-registration-div .portal-registration-image-div::before { 
+    background-image: url('../../../all-images/images/slide3.png'); 
+    animation: registration-fade1 9s infinite; 
+} 
+ 
+.portal-registration-div .portal-registration-image-div::after { 
+    background-image: url('../../../all-images/images/slide4.png'); 
+    animation: registration-fade2 9s infinite; 
+}
+
+
+@keyframes registration-fade1 {
+    0%, 45% {
+        opacity: 1;
+    }
+
+    50%, 95% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes registration-fade2 {
+    0%, 45% {
+        opacity: 0;
+    }
+
+    50%, 95% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.portal-registration-div .portal-registration-form-div {
+    position: absolute;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-login-div{
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.login-logo{
+    width: 250px;
+    overflow: hidden;
+}
+
+.login-logo img{
+    width: 100%;
+   object-fit: cover;
+}
+
+.admin-login-div h1{
+    font-size: 28px;
+    font-family: title-font;
+  color: var(--sub-body-color2);
+}
+
+.admin-login-div h1 span{
+    font-size: 28px;
+  color: var(--primary-color);
+}
+
+.admin-login-div p{
+ font-size: 14px;
+ font-family: sub-title-font;
+ color: var(--sub-body-color);
+}
+.admin-login-div .input-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.admin-login-div .input-div input {
+    width: 100%;
+    height: 55px;
+    padding: 0 30px;
+    border: 1px solid #DCDCDC;
+    border-radius: 12px;
+    outline: none;
+    background-color: #FFFFFF;
+    color: #b9b8b8;
+    font-family: sub-title-font;
+    font-size: 15px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.admin-login-div .input-div input::placeholder {
+    color: #c9c7c7;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.admin-login-div .input-div input:focus {
+    border-color: var(--primary-color);
+}
+
+.admin-login-div .text_field_container .placeholder {
+    color: #b9b8b8;
+}
+
+
+.admin-login-div .remeber-div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.admin-login-div .remeber-div .check-box{
+   display: flex;
+   align-items: center;
+   gap: 5px;
+}
+
+
+.admin-login-div .remeber-div .check-box label{
+  font-size: 16px;
+  color: var(--sub-body-color);
+  font-family: sub-title-font;
+}
+
+
+.admin-login-div .remeber-div a{
+   font-size: 16px;
+  color: var(--link-color);
+  font-family: sub-title-font;
+}
+
+
+.admin-login-div .remeber-div a:hover{
+ color: var(--secondary-color);
+}
+
+.admin-login-div .login-btn button{
+   width: 100%;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+    justify-content: center;
+    padding: 15px 0;
+    font-family: sub-title-font;
+    font-size: 16px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 12px;
+    outline: none;
+}
+
+.admin-login-div span{
+    font-size: 16px;
+    color: var(--sub-body-color);
+    font-family: sub-title-font;
+}
+
+.admin-login-div span a{
+    font-size: 16px;
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+#page-content {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+
+ .otp-message {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 16px;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    background: #f5fbf5;
+    color: #444;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.otp-message i {
+    color: #328ab3;
+    margin-right: 5px;
+}
+
+
+ .otp-input-div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.otp-input-div input {
+    width: 13%;
+    height: 60px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+    font-size: 22px;
+    color: #000;
+}
+
+.otp-input-div input:focus {
+    border-color: var(--secondary-color);
+}
+
+
+.otp-resend {
+        width: 100%;
+        font-size: 15px;
+        font-family: sub-title-font;
+        color: #363636;
+    }
+
+    .otp-resend a {
+        color: #328ab3;
+        text-decoration: none;
+    }
+
+
+

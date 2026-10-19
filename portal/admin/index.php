@@ -3,17 +3,35 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <?php include 'meta.php'?>
-<title>Portal Management | <?php echo $appName;?></title>
+<title>Administrative  Dashboard | <?php echo $appName;?></title>
 </head>
 <body>
 
     <?php include 'header.php'?>
     <?php include 'side-bar.php'?>
 
-    <main id="page-content">
-        <h1>Dasboard</h1>
-    </main>
-    <?php include 'bottom-scripts.php'?>
+    <div class="inner-content">
+         <main id="page-content">
+            <script>
+                    $(document).ready(function () {
+                        let savedPage = sessionStorage.getItem("currentDashboardPage") ?? "dashboard";
+            
+                        _getActivePage({
+                            page: savedPage, 
+                            divid: savedPage
+                        });
+
+                        let savedForm = sessionStorage.getItem("currentDashboardForm") ?? '';
+                        if (savedForm) {
+                            _getForm(JSON.parse(savedForm));
+                        }
+                    });
+            </script>
+         </main>
+    </div>
+
+   
+    <?php include '../../bottom-scripts.php'?>
 </body>
 </html>
 
