@@ -104,44 +104,16 @@
             </div>
 
             <div class="div">
-                <a href="<?php echo $websiteUrl; ?>/services" title="Services">
-                    <li <?php if ($page == 'services') { ?> id="active-li" <?php } ?>><i class="bi bi-bricks"></i>
-                        Services</li>
+                <a href="<?php echo $websiteUrl; ?>/services" title="Module">
+                    <li <?php if ($page == 'services') { ?> id="active-li" <?php } ?>><i class="bi bi-bricks"></i> Module</li>
                 </a>
             </div>
 
             <div class="div">
-                <a href="<?php echo $websiteUrl; ?>/our-work-model" title="Our Work Model">
+                <a href="<?php echo $websiteUrl; ?>/our-work-model" title="How it Works">
                     <li <?php if ($page == 'our-work-model') { ?> id="active-li" <?php } ?>>
                         <i class="bi bi-person-workspace"></i>
-                        Our Work Model
-                    </li>
-                </a>
-            </div>
-
-            <div class="div">
-                <a href="<?php echo $websiteUrl; ?>/about" title="About Us">
-                    <li <?php if ($page == 'about') { ?> id="active-li" <?php } ?>>
-                        <i class="bi-building"></i>
-                        About Us
-                    </li>
-                </a>
-            </div>
-
-            <div class="div">
-                <a href="<?php echo $websiteUrl; ?>/blog" title="Blog">
-                    <li <?php if ($page == 'blog') { ?> id="active-li" <?php } ?>>
-                        <i class="bi-journals"></i>
-                        Blog
-                    </li>
-                </a>
-            </div>
-
-            <div class="div">
-                <a href="<?php echo $websiteUrl; ?>/contact-us" title="Contact Us">
-                    <li <?php if ($page == 'contact-us') { ?> id="active-li" <?php } ?>>
-                        <i class="bi-headset"></i>
-                        Contact Us
+                        How It Works
                     </li>
                 </a>
             </div>
@@ -156,10 +128,10 @@
             </div>
 
             <div class="div">
-                <a href="<?php echo $websiteUrl; ?>/gallery" title="Gallery">
-                    <li <?php if ($page == 'gallery') { ?> id="active-li" <?php } ?>>
-                        <i class="bi bi-image"></i>
-                        Gallery
+                <a href="<?php echo $websiteUrl; ?>/blog" title="Blog">
+                    <li <?php if ($page == 'blog') { ?> id="active-li" <?php } ?>>
+                        <i class="bi-journals"></i>
+                        Blog
                     </li>
                 </a>
             </div>
@@ -168,13 +140,31 @@
                 <a href="<?php echo $websiteUrl; ?>/faq" title="Frequently Asked Questions">
                     <li <?php if ($page == 'faq') { ?> id="active-li" <?php } ?>>
                         <i class="bi-patch-question"></i>
-                        Frequently Asked Question
+                       Frequently Asked Question
+                    </li>
+                </a>
+            </div>
+
+            <!-- <div class="div">
+                <a href="<?php echo $websiteUrl; ?>/about" title="About Us">
+                    <li <?php if ($page == 'about') { ?> id="active-li" <?php } ?>>
+                        <i class="bi-building"></i>
+                        About Us
+                    </li>
+                </a>
+            </div> -->
+
+            <div class="div">
+                <a href="<?php echo $websiteUrl; ?>/contact-us" title="Contact Us">
+                    <li <?php if ($page == 'contact-us') { ?> id="active-li" <?php } ?>>
+                        <i class="bi-headset"></i>
+                       Contact Us
                     </li>
                 </a>
             </div>
         </div>
 
-        <div class="mobile-menu-button-wrapper">
+        <!-- <div class="mobile-menu-button-wrapper">
             <div class="heading-title">
                 <div class="content">
                     <h3>Ready to get started?</h3>
@@ -194,10 +184,10 @@
 
                 <a href="<?php echo $websiteUrl; ?>/artisan/sign-up" class="join-team-btn">
                     <i class="bi bi-briefcase"></i>
-                    <span>Join Our Team</span>
+                    <span>Request for a Demo</span>
                 </a>
             </div>
-        </div>
+        </div> -->
     </div>
 
     <div class="sidenavdiv-in" onclick="_closeSideNav()"></div>
