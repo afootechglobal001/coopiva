@@ -1,9 +1,9 @@
 <?php
 error_reporting(E_ALL ^ E_NOTICE ^ E_DEPRECATED ^ E_WARNING);
 $websiteAutoUrl = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-$appName = 'New Project';
+$appName = 'Coopiva';
 
-//$websiteUrl='https://coopiva.com'; /// For Live Server Url //
+// $websiteUrl='http://172.20.10.2/afootech/coopiva'; /// For Live Server Url //
 $websiteUrl = 'http://localhost/afootech/coopiva';
 //$websitePath = $_SERVER['DOCUMENT_ROOT'];
 $websitePath = $_SERVER['DOCUMENT_ROOT'].'/afootech/coopiva'; //dirname(__FILE__);

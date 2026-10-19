@@ -1,2 +1,784 @@
-@charset "utf-8";
-/* CSS Document */
+/* HEADER */
+header {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100;
+}
+
+.header-top.scrolled {
+    display: none;
+}
+
+.header-bottom.scrolled {
+    color: var(--body-color);
+    background-color: var(--bg-white);
+}
+
+.header-bottom.scrolled .header-bottom-div-in .social-div i {
+    color: var(--body-color);
+}
+
+/* ///HEADER TOP/// */
+.header-top {
+    width: 100%;
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-top .header-top-div-in {
+    width: 85%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--general-border-color);
+}
+
+.header-top .header-top-div-in .last-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-top .header-top-div-in .last-wrapper .menu {
+    display: none;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    color: var(--bg-white);
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.header-top .header-top-div-in .last-wrapper .menu:hover {
+    color: var(--primary-color);
+}
+
+.header-top .header-top-div-in .logo-div {
+    display: flex;
+    align-items: center;
+    background: transparent;
+}
+
+.header-top .header-top-div-in .logo-div img {
+    width: 250px;
+    object-fit: cover;
+    background: transparent;
+}
+
+.header-top .header-top-div-in .header-contact {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    cursor: pointer;
+}
+
+.header-top .header-top-div-in .header-contact .contact-div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-top .header-top-div-in .header-contact .contact-div .contact-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    border: 2px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-white);
+    font-size: 16px;
+}
+
+.header-top .header-top-div-in .header-contact .contact-div .contact-info {
+    font-family: sub-title-font;
+    font-size: 13px;
+    color: var(--text-white);
+    transition: all 0.3s ease;
+}
+
+.header-top .header-top-div-in .header-contact .contact-div:hover .contact-info {
+    color: var(--primary-color);
+}
+
+@media screen and (max-width: 1200px) {
+    .header-top .header-top-div-in {
+        width: 95%;
+    }
+
+    .header-top .header-top-div-in .logo-div img {
+        width: 180px;
+        height: 70px;
+        object-fit: contain;
+    }
+
+    .header-top .header-top-div-in .header-contact .contact-div .contact-icon {
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+    }
+
+    .header-top .header-top-div-in .header-contact .contact-div .contact-info {
+        font-size: 10px;
+    }
+
+    .header-top .header-top-div-in .header-contact {
+        gap: 15px;
+    }
+
+    .header-top .header-top-div-in .header-contact .contact-div {
+        gap: 5px;
+    }
+}
+
+/* ///HEADER BOTTOM/// */
+.header-bottom {
+    width: 100%;
+    min-height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-white);
+}
+
+.header-bottom .header-bottom-div-in {
+    width: 85%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-bottom .header-bottom-div-in .nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-bottom .header-bottom-div-in .nav-wrapper nav ul {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+}
+
+.header-bottom .header-bottom-div-in .nav-wrapper nav ul li {
+    font-family: sub-title-font;
+    list-style: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.header-bottom .header-bottom-div-in .nav-wrapper nav ul a:hover li,
+.header-bottom .header-bottom-div-in .nav-wrapper nav ul li.active {
+    border-bottom: 4px solid var(--primary-color);
+    padding: 4px 0px;
+}
+
+.header-bottom .header-bottom-div-in .social-div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.3s ease;
+}
+
+.header-bottom .header-bottom-div-in .social-div i {
+    font-family: sub-title-font;
+    color: var(--text-white);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.header-bottom .header-bottom-div-in .social-div i:hover {
+    color: var(--primary-color);
+}
+
+#readMore {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px 0px;
+    font-size: 15px;
+    /* border-bottom: 4px solid var(--primary-color); */
+    white-space: nowrap;
+    display: none;
+}
+
+#readMore i {
+    font-size: 14px;
+    font-family: sub-title-font;
+}
+
+#readMore ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 150px;
+    min-height: 0;
+    padding: 8px 0;
+    border-radius: 5px;
+    background: #fcfbfb;
+    box-shadow: 0 3px 12px rgba(2, 2, 2, 0.15);
+    display: none;
+    z-index: 600;
+}
+
+#readMore ul .sub-nav-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+
+#readMore ul .sub-nav-div a {
+    width: 100%;
+    text-decoration: none;
+}
+
+#readMore ul .sub-nav-div .li {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    min-height: 0;
+    border-top: none;
+    color: #000;
+    font-family: sub-title-font;
+    font-size: 13px;
+    transition: 0.2s ease;
+}
+
+#readMore ul .sub-nav-div .li:hover {
+    background: #f1f1f1;
+}
+
+#readMore:hover ul {
+    display: block;
+}
+
+@media screen and (max-width: 1024px) {
+    .disp-none {
+        display: none;
+    }
+
+    #readMore {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header-top.scrolled {
+        display: flex;
+        background-color: var(--bg-white);
+    }
+
+    .header-top.scrolled .header-top-div-in .last-wrapper .menu {
+        color: var(--body-color);
+    }
+
+    .header-top .header-top-div-in {
+        border: none;
+    }
+
+    .header-top .header-top-div-in .last-wrapper .menu {
+        display: flex;
+    }
+
+    .header-top .header-top-div-in .last-wrapper .logo-div img {
+        width: 130px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .header-top .header-top-div-in .header-contact .contact-div {
+        display: none;
+    }
+
+    .header-bottom {
+        display: none;
+    }
+}
+
+/* SLIDE SECTION */
+.slide-section {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: url("../all-images/images/coopiva-background.jpg") no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-section .slide-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--overlay-color);
+}
+
+.slide-section .slide-content {
+    width: 100%;
+    max-width: 950px;
+    z-index: 2;
+    text-align: center;
+    color: var(--text-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.slide-section .slide-content .slide-title {
+    font-size: 30px;
+    font-family: sub-title-font;
+    color: var(--primary-color);
+}
+
+.slide-section .slide-content h1 {
+    font-size: 65px;
+    font-family: title-font;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.slide-section .slide-content p {
+    font-family: body-font;
+    max-width: 750px;
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+.slide-section .slide-content .slide-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.slide-section .slide-content .slide-button button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.slide-section .slide-content .slide-button a {
+    padding: 16px 35px;
+    background: var(--primary-color);
+    color: var(--text-white);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: sub-title-font;
+    border: 2px solid var(--border-color);
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.slide-section .slide-content .slide-button button a:hover {
+    border: 1px solid var(--primary-color);
+}
+
+@media screen and (max-width: 1000px) {
+    .slide-section .slide-content .slide-title {
+        font-size: 20px;
+    }
+
+    .slide-section .slide-content h1 {
+        font-size: 40px;
+    }
+
+    .slide-section .slide-content p {
+        max-width: 500px;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .slide-section .slide-content .slide-button a {
+        padding: 14px 25px;
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .slide-section .slide-content .slide-title {
+        font-size: 15px;
+    }
+
+    .slide-section .slide-content h1 {
+        font-size: 30px;
+        line-height: 1.3;
+    }
+
+    .slide-section .slide-content p {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    .slide-section .slide-content .slide-button a {
+        padding: 13px 22px;
+        font-size: 10px;
+    }
+
+}
+
+/* ///INDEX SECTION/// */
+.index-section {
+    width: 100%;
+    top: -80px;
+    position: relative;
+}
+
+/* ///CooPIVA SERVICE/// */
+.coopiva-services {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.coopiva-services .services-container {
+    width: 85%;
+    height: auto;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.coopiva-services .services-container .services-intro {
+    width: 100%;
+    min-height: 350px;
+    box-sizing: border-box;
+    background: var(--primary-color);
+    color: var(--text-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.coopiva-services .services-container .services-intro span {
+    font-family: sub-title-font;
+    font-size: 15px;
+}
+
+.coopiva-services .services-container .services-intro h2 {
+    font-family: title-font;
+    font-size: 40px;
+}
+
+.coopiva-services .services-container .services-intro p {
+    font-family: body-font;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.coopiva-services .services-container .service-card {
+    width: 100%;
+    min-height: 350px;
+    background: var(--bg-white);
+    border-right: 1px solid var(--bg-color2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.coopiva-services .services-container .service-card .service-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    border: 3px solid var(--border-color);
+    color: var(--bg-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.coopiva-services .services-container .service-card h3 {
+    font-family: title-font;
+    font-size: 20px;
+    color: var(--sub-body-color);
+}
+
+.coopiva-services .services-container .service-card .service-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.coopiva-services .services-container .service-card .service-btn button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.coopiva-services .services-container .service-card .service-btn button a {
+    padding: 15px 20px;
+    background: var(--primary-color);
+    color: var(--text-white);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: sub-title-font;
+    border: 2px solid var(--border-color);
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.coopiva-services .services-container .service-card .service-btn button a:hover {
+    border: 1px solid var(--primary-color);
+}
+
+@media screen and (max-width: 1000px) {
+
+    .coopiva-services .services-container {
+        width: 95%;
+    }
+
+    .coopiva-services .services-container .services-intro,
+    .coopiva-services .services-container .service-card {
+        min-height: 300px;
+
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .coopiva-services .services-container {
+        width: 95%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .coopiva-services .services-container .services-intro {
+        min-height: 300px;
+        box-sizing: border-box;
+    }
+
+    .coopiva-services .services-container .services-intro h2 {
+        font-size: 32px;
+    }
+
+    .coopiva-services .services-container .services-intro p {
+        font-size: 14px;
+    }
+
+    .coopiva-services .services-container .service-card {
+        min-height: 300px;
+        box-sizing: border-box;
+        border-right: none;
+        border-bottom: 1px solid var(--bg-color2);
+    }
+
+    .coopiva-services .services-container .service-card h3 {
+        font-size: 18px;
+    }
+
+    .coopiva-services .services-container .service-card .service-btn {
+        margin-top: 15px;
+    }
+
+}
+
+
+/* ///SECTION 1/// */
+.body-div {
+    width: 100%;
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.body-div .body-div-in {
+    width: 85%;
+    max-width: 1200px;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ABOUT US SECTION */
+.body-div .body-div-in .about-us-section {
+    width: 100%;
+    min-height: 380px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.body-div .body-div-in .about-us-section .about-us-image {
+    width: 100%;
+    height: 700px;
+}
+
+.body-div .body-div-in .about-us-section .about-us-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.body-div .body-div-in .about-us-section .about-us-content {
+    width: 38%;
+    min-height: 550px;
+    position: absolute;
+    right: 0;
+    background: var(--bg-white);
+    border-top: 4px solid var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.body-div .body-div-in .about-us-section .about-us-content .about-us-label {
+    width: 80%;
+    color: var(--primary-color);
+    font-family: sub-title-font;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.body-div .body-div-in .about-us-section .about-us-content h2 {
+    width: 80%;
+    color: var(--sub-body-color);
+    font-family: title-font;
+    font-size: 30px;
+    line-height: 1.5;
+    font-weight: 700;
+}
+
+.body-div .body-div-in .about-us-section .about-us-content p {
+    width: 80%;
+    color: var(--text-color);
+    font-family: body-font;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.body-div .body-div-in .about-us-section .about-us-content .about-us-signature {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.body-div .body-div-in .about-us-section .about-us-content .about-us-signature span {
+    color: var(--sub-body-color2);
+    font-size: 30px;
+    font-family: allura-font;
+}
+
+.body-div .body-div-in .about-us-section .about-us-content .about-us-signature p {
+    color: var(--text-color);
+    font-family: body-font;
+    font-size: 15px;
+}
+
+.body-div .body-div-in .about-us-section .about-us-content .about-us-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.body-div .body-div-in .about-us-section .about-us-content .about-us-button button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.body-div .body-div-in .about-us-section .about-us-content .about-us-button a {
+    padding: 15px 20px;
+    background: var(--primary-color);
+    color: var(--text-white);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: sub-title-font;
+    border: 4px solid var(--border-color);
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.body-div .body-div-in .about-us-section .about-us-content .about-us-button button a:hover {
+    border: 1px solid var(--primary-color);
+}
+
+.body-div .body-div-in .about-us-statistics {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.body-div .body-div-in .about-us-statistics .about-stat-card {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.body-div .body-div-in .about-us-statistics .about-stat-card .about-stat-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    border: 4px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.body-div .body-div-in .about-us-statistics .about-stat-card .about-stat-icon i {
+    color: var(--text-white);
+    font-size: 35px;
+}
+.body-div .body-div-in .about-us-statistics .about-stat-card h3 {
+    color: var(--sub-body-color);
+    font-family: title-font;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.body-div .body-div-in .about-us-statistics .about-stat-card p {
+    color: var(--primary-color);
+    font-family: sub-title-font;
+    font-size: 15px;
+    font-weight: 600;
+}

@@ -7,7 +7,7 @@ html {
 
 * {
     scrollbar-width: thin;
-    scrollbar-color: #FF6900 #f0f0f0;
+    scrollbar-color: #078718 #f0f0f0;
 }
 *::-webkit-scrollbar-thumb:hover {
     background-color: #FF6900;
@@ -39,8 +39,8 @@ html {
 }
 
 :root{
-	--primary-color: #042555;
-	--secondary-color: #FF6900;
+	--primary-color: #088a19;
+	--secondary-color: #012060;
 	--body-color: #000;
 	--bg-white: #fff;
 	--text-white: #fff;
@@ -53,10 +53,12 @@ html {
   --bg-color2: #e7e7e7;
 	--sub-white-color: #eeeeee;
 	--close-color: #f00;
-	--active-color: #090;
+	--active-color: #45B653;
 	--active-color2: #98CD99;
 	--sub-text-color: #D7353A;
-  
+  --overlay-color:rgba(0, 0, 0, 0.75);
+  --border-color:#a5d6a7;
+
   --shadow-light: rgba(0, 0, 0, 0.1);
   --shadow-medium: rgba(0, 0, 0, 0.2);
   --shadow-heavy: rgba(0, 0, 0, 0.3);
@@ -871,7 +873,7 @@ a {
 }
 
 .index-menu-back-div .div-in .div:hover {
-    background: #fff8f3;
+    background: #f8faf8;
 }
 
 .index-menu-back-div .div-in .div li {
