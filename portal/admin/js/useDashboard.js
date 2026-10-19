@@ -1,10 +1,11 @@
 function _getActivePage(props) {
-  const { page = "", divid = "", nav = "" } = props;
-  _getActiveLink(divid);
-  if (page) {
-    sessionStorage.setItem("currentDashboardPage", page);
-    _getPage({ page: page, url: cbtAdminMiddleWareUrl });
-  }
+    const { page = "", divid = "", nav = "" } = props;
+    _getActiveLink(divid);
+
+    if (page) {
+        sessionStorage.setItem("currentDashboardPage", page);
+        _getPage({ page: page, url: dashAdminMiddleWareUrl });
+    }
 }
 
 function _getActiveLink(divid) {

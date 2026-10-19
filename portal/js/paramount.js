@@ -17,9 +17,9 @@ function _getPage(options) {
 			url: url,
 			data: dataString,
 			cache: false,
-			success: function (html) {
-				$("#"+pageContainer).html(html);
-			},
+			success: function(html) {
+        $("#" + pageContainer).html(html);
+      },
 		});
 }
 
