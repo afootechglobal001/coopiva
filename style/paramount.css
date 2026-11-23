@@ -40,7 +40,7 @@ html {
 
 :root{
 	--primary-color: #088a19;
-	--secondary-color: #012060;
+	--secondary-color: #0b2d45;
 	--body-color: #000;
 	--bg-white: #fff;
 	--text-white: #fff;
@@ -57,9 +57,9 @@ html {
 	--active-color2: #98CD99;
 	--sub-text-color: #D7353A;
   --overlay-color:rgba(0, 0, 0, 0.75);
-  --border-color:#a5d6a7;
+  --border-color:#b7dfb9;
 
-  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-light: rgba(0, 0, 0, 0.12);
   --shadow-medium: rgba(0, 0, 0, 0.2);
   --shadow-heavy: rgba(0, 0, 0, 0.3);
 
@@ -102,7 +102,6 @@ html {
   --placeholder-color: #999;
   --table-content-bg: #fff;
   --panel-bg-color: #F2F4F4;
-
   --general-border-color: rgba(215,215,215,.5);
 }
 

@@ -26,10 +26,18 @@ $(window).scroll(function () {
     $("#back2Top").fadeOut(1000);
   }
 
-  if (scrollHeight >= 400) {
+  if (scrollHeight >= 140) {
+    //   $("header").addClass("scrolled");
+    // } else {
+    //   $("header").removeClass("scrolled");
+    // }
     $("header").addClass("scrolled");
+    $(".header-bottom").addClass("scrolled");
+    $(".header-top").addClass("scrolled");
   } else {
     $("header").removeClass("scrolled");
+    $(".header-bottom").removeClass("scrolled");
+    $(".header-top").removeClass("scrolled");
   }
 
   if (windowWidth <= 870) {
@@ -90,44 +98,44 @@ function _openLi(ids) {
 
 let currentIndex = 0;
 function _viewPreviewImage(divid) {
-    const images = $("#fetchPagePictures .each-img-div");
-    currentIndex = images.index($("#" + divid));
-    images.removeClass("active");
-    const current = $("#" + divid);
-    current.addClass("active");
-    const src = current.find("img").attr("src");
+  const images = $("#fetchPagePictures .each-img-div");
+  currentIndex = images.index($("#" + divid));
+  images.removeClass("active");
+  const current = $("#" + divid);
+  current.addClass("active");
+  const src = current.find("img").attr("src");
 
-    $("#galleryMainImage, #seoFlyer")
-        .stop(true, true)
-        .fadeOut(150, function () {
-            $(this).attr("src", src).fadeIn(150);
-        });
-
-    // Automatically scroll thumbnail into view
-    current[0].scrollIntoView({
-        behavior: "smooth",
-        inline: "center",
-        block: "nearest"
+  $("#galleryMainImage, #seoFlyer")
+    .stop(true, true)
+    .fadeOut(150, function () {
+      $(this).attr("src", src).fadeIn(150);
     });
+
+  // Automatically scroll thumbnail into view
+  current[0].scrollIntoView({
+    behavior: "smooth",
+    inline: "center",
+    block: "nearest"
+  });
 }
 
 function _navigateGallery(direction) {
-    const images = $("#fetchPagePictures .each-img-div");
-    currentIndex += direction;
+  const images = $("#fetchPagePictures .each-img-div");
+  currentIndex += direction;
 
-    if (currentIndex < 0) {
-        currentIndex = images.length - 1;
-    }
-    if (currentIndex >= images.length) {
-        currentIndex = 0;
-    }
-  	_viewPreviewImage(images.eq(currentIndex).attr("id"));
+  if (currentIndex < 0) {
+    currentIndex = images.length - 1;
+  }
+  if (currentIndex >= images.length) {
+    currentIndex = 0;
+  }
+  _viewPreviewImage(images.eq(currentIndex).attr("id"));
 }
 
 function _initializeGallery() {
-    const firstImage = $("#fetchPagePictures .each-img-div:first");
-    if (!firstImage.length) return;
-    _viewPreviewImage(firstImage.attr("id"));
+  const firstImage = $("#fetchPagePictures .each-img-div:first");
+  if (!firstImage.length) return;
+  _viewPreviewImage(firstImage.attr("id"));
 }
 /// Update Reading time ///
 function updateReadingTime() {
@@ -135,15 +143,15 @@ function updateReadingTime() {
   let content = $("#pageContent").text().trim();
 
   if (content.length > 0) {
-      let words = content.split(/\s+/).filter(Boolean).length;
-      let minutes = Math.max(1, Math.ceil(words / wordsPerMinute));
+    let words = content.split(/\s+/).filter(Boolean).length;
+    let minutes = Math.max(1, Math.ceil(words / wordsPerMinute));
 
-      $("#pageContentRead").text(`${minutes} min read`);
+    $("#pageContentRead").text(`${minutes} min read`);
   } else {
-      $("#pageContentRead").text("1 min read");
+    $("#pageContentRead").text("1 min read");
   }
 }
-            
+
 function _navigateBtn() {
   $(document).ready(function () {
     const container = $(".btn-div-in ul");
@@ -244,17 +252,17 @@ function _countStatistics() {
 }
 //// Review Section
 $(document).ready(function () {
-    const params = new URLSearchParams(window.location.search);
-    if (params.get('review') === 'true') {
-        $('html, body').animate({
-            scrollTop: $('#review-section').offset().top
-        }, 800, function () {
-            _getForm({
-                page: 'reviewForm',
-                url: siteMiddlewareUrl
-            });
-        });
-    }
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('review') === 'true') {
+    $('html, body').animate({
+      scrollTop: $('#review-section').offset().top
+    }, 800, function () {
+      _getForm({
+        page: 'reviewForm',
+        url: siteMiddlewareUrl
+      });
+    });
+  }
 });
 
 
@@ -278,7 +286,7 @@ function _changeMaintenanceStep(stepNumber, clickedStep) {
 function _completeServiceRequest() {
   _showCustomConfirm({
     callback: () => {
-      _getNextPage({page:'customreInfoPage'});
+      _getNextPage({ page: 'customreInfoPage' });
     },
     title: "Request Submitted!",
     message: "Your service request has been successfully submitted. Our team will review your request and contact you with the next steps and appointment details.",
@@ -291,7 +299,7 @@ function _completeServiceRequest() {
 
 
 function _proceedIndexServiceRequest() {
-  try { 
+  try {
     ////////get all needed values////////////
     let issueCount = 0;
     const fullName = $("#fullName").val()?.trim();
@@ -308,10 +316,10 @@ function _proceedIndexServiceRequest() {
     if (issueCount > 0) return;
 
     const btnText = $("#proccedBtn").html();
-	  _btnDisable("proccedBtn", btnText, true);
+    _btnDisable("proccedBtn", btnText, true);
 
     const formData = {
-      fullName,   
+      fullName,
       emailAddress,
       phoneNumber,
     };
@@ -326,7 +334,7 @@ function _proceedIndexServiceRequest() {
     window.location.href = customreServiceRequestUrl;
     _btnDisable("proccedBtn", btnText, false);
   } catch (error) {
-  console.error("Error:", error);
+    console.error("Error:", error);
     _callCatchError(() => _proceedIndexServiceRequest());
   }
 }
@@ -335,9 +343,9 @@ function _proceedIndexServiceRequest() {
 
 //// Page Request for Service
 function _pageRequestForService() {
-	try {
+  try {
     let issueCount = 0;
-		const fullName = $("#fullName").val().trim();
+    const fullName = $("#fullName").val().trim();
     const emailAddress = $("#emailAddress").val().trim();
     const phoneNumber = $("#phoneNumber").val().trim();
     const serviceDescription = $("#serviceDescription").val().trim();
@@ -345,7 +353,7 @@ function _pageRequestForService() {
     systemGeneratedAddress = systemGeneratedAddress;
     let distance = systemGeneratedDistance;
     let duration = systemGeneratedDuration;
-    
+
     ///// empty field validation//////////
     issueCount += _validateEmptyValue("fullName", "FULL NAME");
     issueCount += _validateEmptyValue("emailAddress", "EMAIL ADDRESS");
@@ -355,67 +363,67 @@ function _pageRequestForService() {
     issueCount += _validateEmptyValue("serviceDescription", "SERVICE DESCRIPTION");
     issueCount += _validateEmptyValue("destination", "ADDRESS");
 
-		if (issueCount > 0) return;
+    if (issueCount > 0) return;
 
-		// Gather form data
-		const formData = {
-			fullName,
-			emailAddress,
-			phoneNumber,
+    // Gather form data
+    const formData = {
+      fullName,
+      emailAddress,
+      phoneNumber,
       serviceDescription,
       serviceAddress,
       systemGeneratedAddress,
       distance,
       duration,
-		};
+    };
 
     ////// confirm action////
-		_showCustomConfirm({
+    _showCustomConfirm({
       callback: () => {
-          _pageRequestForServiceCallback(formData);
+        _pageRequestForServiceCallback(formData);
       },
-			title: "Are you sure?",
-			message: 'Are you sure you want to submit? This action is irreversible.',
-			alertType: "warning",
-			falseActionBtn: true,
-			closeOnOverlayClick: true,
+      title: "Are you sure?",
+      message: 'Are you sure you want to submit? This action is irreversible.',
+      alertType: "warning",
+      falseActionBtn: true,
+      closeOnOverlayClick: true,
     });
-    } catch (error) {
-        console.error("Error:", error);
-        _callCatchError(() => _pageRequestForService());
-    }
+  } catch (error) {
+    console.error("Error:", error);
+    _callCatchError(() => _pageRequestForService());
+  }
 }
 
 //// Page Request for Service Callback ////////
 function _pageRequestForServiceCallback(formData) {
-    ///// get btn text /////
-    const btnText = $("#requestServiceBtn").html();
-    _btnDisable("requestServiceBtn", btnText, true);
+  ///// get btn text /////
+  const btnText = $("#requestServiceBtn").html();
+  _btnDisable("requestServiceBtn", btnText, true);
 
-    ///// call endpoint //////
-    _callRawEndPoints({
-      url: `site/customers/create-service-request`,
-      formData,
-    })
-	.then((response) => {
-		_clearAllSession();
-		_showCustomConfirm({
-			callback: () => {
-				window.location.replace(customreServiceRequestUrl); 
-			},
-			title: "Request Submitted!",
-			message: response?.message,
-			alertType: "success",
-			trueActionBtnText: "Okay, Thanks",
-			closeOnOverlayClick: true,
-		});
+  ///// call endpoint //////
+  _callRawEndPoints({
+    url: `site/customers/create-service-request`,
+    formData,
+  })
+    .then((response) => {
+      _clearAllSession();
+      _showCustomConfirm({
+        callback: () => {
+          window.location.replace(customreServiceRequestUrl);
+        },
+        title: "Request Submitted!",
+        message: response?.message,
+        alertType: "success",
+        trueActionBtnText: "Okay, Thanks",
+        closeOnOverlayClick: true,
+      });
     })
     .catch((error) => {
-        console.error("Error:", error);
-        if (error.status == 0) {
-            _callAjaxError(() => _pageRequestForServiceCallback(formData), error.message);
-            _btnDisable("requestServiceBtn", btnText, false);
-        } else {
+      console.error("Error:", error);
+      if (error.status == 0) {
+        _callAjaxError(() => _pageRequestForServiceCallback(formData), error.message);
+        _btnDisable("requestServiceBtn", btnText, false);
+      } else {
         _showCustomConfirm({
           title: "Invalid Service Request!",
           message: error.message,
@@ -424,12 +432,12 @@ function _pageRequestForServiceCallback(formData) {
           closeOnOverlayClick: true,
         });
         _btnDisable("requestServiceBtn", btnText, false);
-        }
+      }
     });
 }
 
 //// Clear All Session Storage ///
 function _clearAllSession() {
-    localStorage.clear();
-    sessionStorage.clear();
+  localStorage.clear();
+  sessionStorage.clear();
 }
