@@ -34,7 +34,6 @@
                     </button> 
                 </div>
             </div>
-            
         </div>
     </div>
     <div class="header-bottom">
@@ -50,65 +49,67 @@
                         </a>
 
                         <a href="<?php echo $websiteUrl ?>/module" title="Module">
-                            <li class="<?php if (strstr($websiteAutoUrl, "$websiteUrl/module")) { ?> active <?php } ?>">
+                            <li class="<?php if (strstr($websiteAutoUrl, "$websiteUrl/index")) { ?> active <?php } ?>">
                                 Module
                             </li>
                         </a>
 
                         <a href="<?php echo $websiteUrl ?>/how-it-works" title="How It Works">
-                            <li class="<?php if (strstr($websiteAutoUrl, "$websiteUrl/how-it-works")) { ?> active <?php } ?>">
+                            <li class="<?php if (strstr($websiteAutoUrl, "$websiteUrl/index")) { ?> active <?php } ?>">
                                 How It Works
                             </li>
                         </a>
 
                         <a href="<?php echo $websiteUrl ?>/review" title="Review" class="disp-none">
-                            <li class="<?php if (strstr($websiteAutoUrl, "$websiteUrl/review")) { ?> active <?php } ?>">
+                            <li class="<?php if (strstr($websiteAutoUrl, "$websiteUrl/index")) { ?> active <?php } ?>">
                                 Review
                             </li>
                         </a>
 
                         <a href="<?php echo $websiteUrl ?>/blog" title="Blog" class="disp-none">
-                            <li class="<?php if (strstr($websiteAutoUrl, "$websiteUrl/blog")) { ?> active <?php } ?>">
+                            <li class="<?php if (strstr($websiteAutoUrl, "$websiteUrl/index")) { ?> active <?php } ?>">
                                 Blog
                             </li>
                         </a>
 
                         <a href="<?php echo $websiteUrl ?>/faq" title="FAQ" class="disp-none">
-                            <li class="<?php if (strstr($websiteAutoUrl, "$websiteUrl/faq")) { ?> active <?php } ?>">
+                            <li class="<?php if (strstr($websiteAutoUrl, "$websiteUrl/index")) { ?> active <?php } ?>">
                                 FAQ
                             </li>
                         </a>
 
                         <a href="<?php echo $websiteUrl ?>/contact-us" title="Contact Us" class="disp-none">
-                            <li class="<?php if (strstr($websiteAutoUrl, "$websiteUrl/contact-us")) { ?> active <?php } ?>">
+                            <li class="<?php if (strstr($websiteAutoUrl, "$websiteUrl/index")) { ?> active <?php } ?>">
                                 Contact Us
                             </li>
+            
                         </a>
+
                         <li id="readMore" class="read-more-li">
                                 <i class="bi bi-plus"></i> More
                                 <ul>
                                     <div class="sub-nav-div">
 
                                         <a href="<?php echo $websiteUrl ?>/review" title="Review">
-                                            <li class="<?php if (strstr($websiteAutoUrl, "$websiteUrl/review")) { ?> active <?php } ?>">
+                                            <li class="<?php if (strstr($websiteAutoUrl, "$websiteUrl/index")) { ?> active <?php } ?>">
                                                 Review
                                             </li>
                                         </a>
 
                                         <a href="<?php echo $websiteUrl ?>/blog" title="Blog">
-                                            <li class="<?php if (strstr($websiteAutoUrl, "$websiteUrl/blog")) { ?> active <?php } ?>">
+                                            <li class="<?php if (strstr($websiteAutoUrl, "$websiteUrl/index")) { ?> active <?php } ?>">
                                                 Blog
                                             </li>
                                         </a>
 
                                         <a href="<?php echo $websiteUrl ?>/faq" title="FAQ">
-                                            <li class="<?php if (strstr($websiteAutoUrl, "$websiteUrl/faq")) { ?> active <?php } ?>">
+                                            <li class="<?php if (strstr($websiteAutoUrl, "$websiteUrl/index")) { ?> active <?php } ?>">
                                                 FAQ
                                             </li>
                                         </a>
 
                                         <a href="<?php echo $websiteUrl ?>/contact-us" title="Contact Us">
-                                            <li class="<?php if (strstr($websiteAutoUrl, "$websiteUrl/contact-us")) { ?> active <?php } ?>">
+                                            <li class="<?php if (strstr($websiteAutoUrl, "$websiteUrl/index")) { ?> active <?php } ?>">
                                                 Contact Us
                                             </li>
                                         </a>
@@ -119,7 +120,7 @@
                     </ul>
                 </nav>
             </div>
-            
+
             <div class="social-div">
                 <i class="bi bi-facebook"></i>
                 <i class="bi bi-twitter"></i>

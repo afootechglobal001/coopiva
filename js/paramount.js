@@ -581,12 +581,14 @@ function generalButtons(props) {
 function _collapse(div_id) {
   const $currentFaq = $("#" + div_id);
   const $currentIcon = $("#" + div_id + "num");
+  const $currentArrow = $("#" + div_id + "arrow");
   const $currentAnswer = $("#" + div_id + "answer");
 
   $(".faq-toggle.active-faq").each(function () {
     if (this.id !== div_id) {
       $(this).removeClass("active-faq");
       $(this).find(".expand-div").html('&nbsp;<i class="bi-plus"></i>&nbsp;');
+      $(this).find(".faq-toggle-icon i") .removeClass("bi-chevron-down") .addClass("bi-chevron-up");
       $(this).find(".answer-div").slideUp("slow");
     }
   });
@@ -597,5 +599,14 @@ function _collapse(div_id) {
       ? '&nbsp;<i class="bi-dash"></i>&nbsp;'
       : '&nbsp;<i class="bi-plus"></i>&nbsp;',
   );
+  $currentArrow 
+    .toggleClass("bi-chevron-up", !isActive) 
+    .toggleClass("bi-chevron-down", isActive);
   $currentAnswer.slideToggle("slow");
 }
+
+$(document).ready(function () {
+
+    $("#faq1answer").show();
+
+});
